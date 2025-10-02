@@ -33,7 +33,7 @@ LearnMo is a modern, responsive e-learning platform built with vanilla JavaScrip
 
 1. **Clone or Download the Project**
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/mercyngatia/LearnMo.git>
    cd learnmo
    ```
 
@@ -62,7 +62,7 @@ LearnMo is a modern, responsive e-learning platform built with vanilla JavaScrip
    ```
 
 4. **Open in Browser**
-   Navigate to `http://localhost:8000` in your web browser.
+   Navigate to `https://learnmoo.netlify.app/` in your web browser.
 
 ## 🎯 How to Use
 
