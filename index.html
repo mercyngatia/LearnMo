@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnMo - Mini E-Learning Platform</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    
+    <!--Header-->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <span class="logo-vibe">Learn</span>
+                <span class="logo-coding">Mo</span>
+            </h1>
+            <nav class="nav" id="nav-menu">
+                <span id="user_email" class="user-email"></span>
+                <button id="logout-btn" class="btn-logout" style="display: none;">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!--AUTH VIEW: Login and Registration-->
+        <section id="view-auth" class="view auth-view active">
+            <div class="auth-container">
+                <div class="left-section">
+                    <div class="auth-box">
+                        <h2 class="auth-title">Welcome to LearnMo</h2>
+                        <p class="auth-subtitle">Sign in or create an account to start learning</p>
+
+                        <!--Login Form-->
+                        <div id="login-form" class="auth-form">
+                            <h3 class="form-title">Login</h3>
+                            <form id="form-login">
+                                <div class="form-group">
+                                    <label for="login-email">Email</label>
+                                    <input 
+                                    type="email"
+                                    id="login-email"
+                                    class="form-input"
+                                    placeholder="you@example.com"
+                                    required
+                                    autocomplete="email"
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="login-password">Password</label>
+                                    <input 
+                                    type="password"
+                                    id="login-password"
+                                    class="form-input"
+                                    placeholder="......"
+                                    required
+                                    autocomplete="current-password"
+                                    minlength="6">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" id="login-submit">
+                                    Login
+                                </button>
+                                <div id="login-error" class="error-message"></div>
+                            </form>
+                            <p class="auth-switch">Don't have an account?
+                                <button type="button" class="link-button" id="show-register">
+                                    Register
+                                </button>
+                            </p>
+                        </div>
+
+                        <!--Register Form-->
+                        <div id="register-form" class="auth-form" style="display: none;">
+                            <h3 class="form-title">Create Account</h3>
+                            <form id="form-register">
+                                <div class="form-group">
+                                    <label for="register-email">Email</label>
+                                    <input
+                                    type="email"
+                                    id="register-email"
+                                    class="form-input"
+                                    placeholder="you@example.com"
+                                    required
+                                    autocomplete="email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-password">Password</label>
+                                    <input
+                                    type="password"
+                                    id="register-password"
+                                    class="form-input"
+                                    placeholder="......"
+                                    required
+                                    autocomplete="new-password"
+                                    minlength="6">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="register-password-confirm">Confirm Password</label>
+                                    <input type="password"
+                                    id="register-password-confirm"
+                                    class="form-input"
+                                    placeholder="......"
+                                    required
+                                    autocomplete="new-password"
+                                    minlength="6">
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="register-submit">Create Account</button>
+                                <div id="register-error" class="error-message"></div>
+                                <div id="register-success" class="success-message"></div>
+                            </form>
+                            <p class="auth-switch">Already have an account?
+                            <button type="button" class="link-button" id="show-login">Login</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-section">
+                    <div class="right-content">
+                        <h2 class="right-title">Unlock Your Learning Potential</h2>
+                        <p class="right-description">Join thousands of learners who are advancing their skills and careers with our comprehensive courses.</p>
+                        
+                        <ul class="features">
+                            <li>Access to 500+ expert-led courses</li>
+                            <li>Learn at your own pace with flexible scheduling</li>
+                            <li>Get certified and showcase your skills</li>
+                            <li>Join a community of passionate learners</li>
+                        </ul>
+                        
+                        <div class="testimonial">
+                            <p class="testimonial-text">"LearnMo transformed my career. The courses are practical and the instructors are top-notch!"</p>
+                            <p class="testimonial-author">- Sarah Johnson, Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Home view: Course List-->
+        <section id="view-home" class="view" style="display: none;">
+            <div class="container">
+                <div class="page-header">
+                    <h2>Explore Courses</h2>
+                    <p class="subtitle">Build your skills with our interactive coding courses</p>
+                </div>
+                <div id="course-list" class="course-grid">
+                    <!--Courses populated by JS-->
+                </div>
+            </div>
+        </section>
+
+        <!--Detail view: single course-->
+        <section id="view-detail" class="view" style="display: none;">
+            <div class="container">
+                <button id="back-btn" class="back-btn"> ← Back to courses</button>
+                <div id="course-detail">
+                    <!--Course detail populated by JS-->
+                </div>
+            </div>
+        </section>
+
+        <!--Loading Spinner-->
+        <div id="loading-spinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 LearnMo. Learn, build, grow.</p>
+        </div>
+    </footer>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/app.js"></script>
+</body>
+</html>
